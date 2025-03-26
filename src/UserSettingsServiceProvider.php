@@ -2,9 +2,9 @@
 
 namespace IurieMalai\UserSettings;
 
+use IurieMalai\UserSettings\Commands\UserSettingsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use IurieMalai\UserSettings\Commands\UserSettingsCommand;
 
 class UserSettingsServiceProvider extends PackageServiceProvider
 {
