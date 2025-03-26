@@ -2,21 +2,8 @@
 
 namespace IurieMalai\UserSettings\Traits;
 
-use Illuminate\Database\Eloquent\Casts\Attribute;
-
 trait HasSettings
 {
-    /**
-     * Cast the settings attribute to an array.
-     */
-    protected function settings(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => is_array($value) ? $value : json_decode($value ?: '{}', true),
-            set: fn ($value) => json_encode($value),
-        );
-    }
-
     /**
      * Get a specific setting or a default value.
      */
