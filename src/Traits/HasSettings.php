@@ -2,8 +2,6 @@
 
 namespace IurieMalai\UserSettings\Traits;
 
-use Illuminate\Database\Eloquent\Casts\AsArrayObject;
-
 trait HasSettings
 {
     protected function castSettingsAttribute(): array

@@ -2,7 +2,6 @@
 
 namespace IurieMalai\UserSettings;
 
-use IurieMalai\UserSettings\Commands\UserSettingsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -11,9 +10,9 @@ class UserSettingsServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name("user-settings")
+            ->name('user-settings')
             ->hasConfigFile()
-            ->hasMigration("add_settings_to_users_table");
+            ->hasMigration('add_settings_to_users_table');
     }
 
     public function boot()
