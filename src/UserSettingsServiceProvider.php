@@ -22,4 +22,9 @@ class UserSettingsServiceProvider extends PackageServiceProvider
             ->hasMigration('create_user_settings_table')
             ->hasCommand(UserSettingsCommand::class);
     }
+
+    public function boot()
+    {
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+    }
 }
