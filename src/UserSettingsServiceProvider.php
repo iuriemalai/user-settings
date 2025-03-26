@@ -22,7 +22,7 @@ class UserSettingsServiceProvider extends PackageServiceProvider
     {
         // Correct migration path from src folder to database/migrations
         $this->publishes([
-            __DIR__.'/../../database/migrations/create_user_settings_table.php' => database_path('migrations/' . date('Y_m_d_His') . '_create_user_settings_table.php'),
+            __DIR__.'/../../database/migrations/create_user_settings_table.php' => database_path('migrations/'.date('Y_m_d_His').'_create_user_settings_table.php'),
         ], 'user-settings-migrations');
 
         // Load migrations from the correct path
