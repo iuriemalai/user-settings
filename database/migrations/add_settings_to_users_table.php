@@ -9,7 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->json('settings')->nullable()->before('created_at');
+            $table->json('settings')->nullable()->after('remember_token');
         });
     }
 
