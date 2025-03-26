@@ -20,12 +20,12 @@ class UserSettingsServiceProvider extends PackageServiceProvider
 
     public function boot()
     {
-        // Correct the migration path
+        // Correct the migration path to point to your actual migrations directory
         $this->publishes([
-            __DIR__.'/../database/migrations/create_user_settings_table.php' => database_path('migrations/' . date('Y_m_d_His') . '_create_user_settings_table.php'),
+            __DIR__.'/../../database/migrations/create_user_settings_table.php' => database_path('migrations/' . date('Y_m_d_His') . '_create_user_settings_table.php'),
         ], 'user-settings-migrations');
 
-        // Load migrations from the package
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        // Load migrations from the correct path
+        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
     }
 }
